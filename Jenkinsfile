@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools { 
       maven 'MAVEN_HOME' 
-      jdk 'JAVA_HOME' 
+      /*jdk 'JAVA_HOME'*/ 
     }
 
     stages {
@@ -37,10 +37,10 @@ pipeline {
                 sh "mvn clean compile package"
             }
         }
-		stage('Deploy to UAT') {
+		stage('Deploy to PROD') {
             steps {
-                input 'Do you want to continue deploymen to UAT?'
-		echo 'Deploy to UAT'
+                input 'Do you want to continue deployment to PROD?'
+		echo 'Deploy to PROD'
 				
             }
         }
