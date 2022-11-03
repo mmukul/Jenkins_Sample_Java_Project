@@ -1,8 +1,7 @@
 pipeline {
     agent any
     tools { 
-      maven 'MAVEN_HOME' 
-      /*jdk 'JAVA_HOME'*/ 
+      maven 'MAVEN_HOME'
     }
 
     stages {
@@ -40,10 +39,8 @@ pipeline {
 		stage('Deploy to PROD') {
             steps {
                 input 'Do you want to continue deployment to PROD?'
-		echo 'Deploy to PROD'
-				
+		echo 'Deploy to PROD'		
             }
-        }
-		
+        }	
     }
 }
