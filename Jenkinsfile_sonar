@@ -1,6 +1,6 @@
 node {
   stage('SCM') {
-    git url: 'https://github.com/ravishsubramanya/Jenkins_Sample_Java_Project.git'
+    git url: 'https://github.com/mmukul/Jenkins_Sample_Java_Project.git'
   }
   stage('SonarQube Analysis') {
     withSonarQubeEnv() {
